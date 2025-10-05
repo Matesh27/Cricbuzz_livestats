@@ -12,13 +12,14 @@ page = st.sidebar.radio(
 )
 
 # Page Routing
+# Page Routing
 if page == "Home":
     st.header("Welcome to Cricbuzz LiveStats 📊")
     st.write("""
     - **Live Matches:** Get live cricket data from Cricbuzz API in a DataFrame  
-    - **Top Players:** View top run scorers from MySQL  
+    - **Top Players:** View palyer stats using player name from API Key  
     - **SQL Queries:** Run predefined queries with DataFrame output  
-    - **CRUD:** Add or view players easily  
+    - **CRUD:** Perform CRUD operations on players easily  
     """)
 elif page == "Live Matches":
     from pages import _1_live_matches as live
@@ -32,4 +33,5 @@ elif page == "SQL Queries":
 elif page == "CRUD":
     from pages import _4_CRUD as crud
     crud.app()
+
 
